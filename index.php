@@ -5,12 +5,20 @@
     <title>Coming soon..</title>
     <link rel="stylesheet" type="text/css" href="style.css">
      <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
-     
+
 
 <body>
-    <?php
-      require_once 'db.php';
+  <?php
+  $name = "Mirac";
+  echo "<h1>$name</h1>";
 
+  for ($i=0; $i < 10; $i++) {
+    echo $i."<br>";
+  }
+   ?>
+
+    <?php
+    require_once 'db.php';
 
 	echo '<h2 class="w3-center">Manual Slideshow</h2>';
  		$sql = "select * from product where is_promotional = 1";
@@ -22,8 +30,8 @@
 
               foreach ($stmt as $item)
               {
-		
-	
+
+
 	  echo'<a href="#"><img class="mySlides" src="'. $item['prod_image'][1] . '" style="width:100%"></a>';
 	  echo'<a href="#"><img class="mySlides" src="'. $item['prod_image'] . '" style="width:100%"></a>';
 	  echo'<a href="#"><img class="mySlides" src="https://www.w3schools.com/W3CSS/img_mountains.jpg" style="width:100%"></a>';
@@ -37,9 +45,3 @@
 
 </body>
 </html>
-
-<?php
-
-
-
- ?>
