@@ -18,7 +18,7 @@
    ?>
 
     <?php
-    require_once 'db.php';
+    require_once 'include/db.php';
 
 	echo '<h2 class="w3-center">Manual Slideshow</h2>';
  		$sql = "select * from product where is_promotional = 1";
