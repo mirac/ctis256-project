@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Coming soon..</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-     <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 <body>
