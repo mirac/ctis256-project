@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-<<<<<<< HEAD
       <meta charset="utf-8">
       <title>Coming soon..</title>
       <link rel="stylesheet" type="text/css" href="style.css">
@@ -61,28 +60,8 @@
 </div>
 
 <!-- Category End -->
-=======
-    <meta charset="utf-8">
-    <title>Coming soon..</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
-<body>
-  <?php
-  $name = "Mirac";
-  echo "<h1>$name</h1>";
-
-  for ($i=0; $i < 10; $i++) {
-    echo $i."<br>";
-  }
-   ?>
->>>>>>> e56d4b587182c0d2cc36ca04644d43c105902d4d
-
-    <?php
-    require_once 'include/db.php';
-
-<<<<<<< HEAD
 
 
 
@@ -113,30 +92,5 @@
   }
 ?>
 
-=======
-	echo '<h2 class="w3-center">Manual Slideshow</h2>';
- 		$sql = "select * from product where is_promotional = 1";
-        $stmt = $db -> query($sql);
-        echo'<div class="w3-content w3-display-container">';
-
-             if($stmt->rowCount()>0)
-            {
-
-              foreach ($stmt as $item)
-              {
-
-
-	  echo'<a href="#"><img class="mySlides" src="'. $item['prod_image'][1] . '" style="width:100%"></a>';
-	  echo'<a href="#"><img class="mySlides" src="'. $item['prod_image'] . '" style="width:100%"></a>';
-	  echo'<a href="#"><img class="mySlides" src="https://www.w3schools.com/W3CSS/img_mountains.jpg" style="width:100%"></a>';
-	  echo'<a href="#"><img class="mySlides" src="https://www.w3schools.com/W3CSS/img_forest.jpg" style="width:100%"></a>';
-}}
-	  echo'<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>';
-	  echo'<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>';
-	echo'</div>';
- ?>
-<script type="text/javascript" src="slide.js"></script>
-
->>>>>>> e56d4b587182c0d2cc36ca04644d43c105902d4d
 </body>
 </html>
