@@ -8,6 +8,10 @@
         </thead>
 
         <?php
+
+        if(isset($_GET["category"]))
+
+            
         $category = $_GET["category"];
         try {
             $list = $db->query("select distinct category from products")->fetchAll(PDO::FETCH_ASSOC);

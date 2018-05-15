@@ -8,7 +8,7 @@ require_once "include/header.php";
 
         <?php
         $cnt = 1;
-        require_once 'db.php';
+
         try {
             $list = $db->query("select distinct category from products")->fetchAll(PDO::FETCH_ASSOC);
 
