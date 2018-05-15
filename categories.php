@@ -38,7 +38,7 @@
 
 
   <div id="category">
-  <table class="table table-hover table-bordered">
+  <table id="cleft" class="table table-hover table-bordered">
 
     <?php
      $cnt = 1;
@@ -51,7 +51,7 @@
 
              if($cnt % 2 == 1){
                echo "<tr>" ;
-             echo "<td>{$row['category']}</td>" ;
+             echo "<td><a href=products.php?category={$row['category']}>{$row['category']}</a></td>" ;
                $cnt = $cnt + 1;
 
 
@@ -65,13 +65,13 @@
 
 
       }
-      echo '</table>  <table class="table table-hover table-bordered">';
+      echo '</table>  <table id="cleft" class="table table-hover table-bordered" >';
 $cnt = 1;
       foreach($list as $row) {
 
           if($cnt % 2 == 0){
             echo "<tr>" ;
-          echo "<td>{$row['category']}</td>" ;
+          echo "<td><a href=products.php?category={$row['category']}>{$row['category']}</a></td>" ;
             $cnt = $cnt + 1;
 
 

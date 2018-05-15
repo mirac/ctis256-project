@@ -20,7 +20,7 @@
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -60,13 +60,6 @@
 </div>
 
 <!-- Category End -->
-
-
-
-
-
-
-
 <!-- promotional Products -->
 <?php
 $item = $_GET["id"] ;
@@ -82,10 +75,12 @@ $item = $_GET["id"] ;
                $itemcnt = 0;
 
                echo  "<h1>" . $row['title'] . "</h1>" ;
-               echo "<img src=" .   $row['image'] . "><br>";
-               echo "<div id='price'>";
-               echo "₺ " . "{$row['price']}";
-
+               echo '<div id="leftpart"><div id="desc">' . $row['description'] . "</div>";
+               echo "<h1 style: ='float: left;'>₺ " . "{$row['price']}";
+               echo '<br><button class="btn btn-primary btn-lg" type="submit">Add to Cart <i class="fas fa-cart-arrow-down"></i></button></h1>';
+               echo '"</div>";'
+               echo '<div id="rightpart"><img src="' .   $row['image'] .  ' style="float: left; margin-right: 40px;"><br>';
+               echo '"</div>";'
 
   }
   } catch(Exception $ex) {

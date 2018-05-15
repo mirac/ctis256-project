@@ -76,7 +76,7 @@
          echo '<div id="probox">';
          echo '<div class="alert alert-success" role="alert">Promotion</div>';
 
-        echo "<a href='product?id={$row['id']}'>" . $row['title'] . "</a>" ;
+        echo "<a href='product.php?id={$row['id']}'>" . $row['title'] . "</a>" ;
 
 
          echo "<img src=" . "{$row['image']}" . "><br>";

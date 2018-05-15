@@ -16,6 +16,12 @@ h1{
 
 }
 
+#cleft {
+	float: left;
+	width: 50%;
+}
+
+
 #maincategory {
 
 	width: 12%;
@@ -66,4 +72,22 @@ margin-top: 30px;
 	margin-top: 5px;
 	width: 175px;
 
+}
+
+#desc {
+	margin-top: 150px;
+	margin-left: 20px;
+	float: left;
+	width: 40%;
+
+}
+
+#leftpart {
+
+	float: left;
+}
+
+#rightpart {
+
+	float: left;
 }
