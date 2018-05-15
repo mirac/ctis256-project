@@ -8,7 +8,7 @@ require_once "include/categories.php";
 <?php
 $item = $_GET["id"] ;
   try {
-      
+
              $stmt = $db->prepare("select * from products where id = ?");
              $stmt->execute([$item]);
              $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
