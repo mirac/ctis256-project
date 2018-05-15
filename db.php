@@ -11,4 +11,3 @@ try {
     echo "<p>DB Connection Error</p>";
     exit;
 }
-}
