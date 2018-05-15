@@ -74,10 +74,10 @@
      $list = $db->query("select * from products where promotional=1")->fetchAll(PDO::FETCH_ASSOC) ;
      foreach($list as $row) {
          echo '<div id="probox">';
-         echo '<div class="alert alert-success" role="alert">
-              Promotion</div>';
+         echo '<div class="alert alert-success" role="alert">Promotion</div>';
 
-         echo "{$row['title']}" ;
+        echo "<a href='product?id={$row['id']}'>" . $row['title'] . "</a>" ;
+
 
          echo "<img src=" . "{$row['image']}" . "><br>";
          echo "<div id='price'>";
