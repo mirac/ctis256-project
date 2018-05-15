@@ -19,9 +19,9 @@ $item = $_GET["id"] ;
                echo '<div id="leftpart"><div id="desc">' . $row['description'] . "</div>";
                echo "<h1 style: ='float: left;'>₺ " . "{$row['price']}";
                echo '<br><button class="btn btn-primary btn-lg" type="submit">Add to Cart <i class="fas fa-cart-arrow-down"></i></button></h1>';
-               echo '"</div>";'
-               echo '<div id="rightpart"><img src="' .   $row['image'] .  ' style="float: left; margin-right: 40px;"><br>';
-               echo '"</div>";'
+               echo '"</div>"';
+               echo '<div id="rightpart"><img src="' .   $row['image'] .  '"><br>';
+               echo '"</div>"';
 
   }
   } catch(Exception $ex) {

@@ -10,9 +10,16 @@
         <?php
 
         if(isset($_GET["category"]))
+        {
+            $category = $_GET["category"];
 
-            
-        $category = $_GET["category"];
+        }
+        else{
+            $category = NULL;
+
+        }
+
+
         try {
             $list = $db->query("select distinct category from products")->fetchAll(PDO::FETCH_ASSOC);
             foreach ($list as $row) {
@@ -31,4 +38,3 @@
         ?>
     </table>
 </div>
-<!-- Category Finish -->
