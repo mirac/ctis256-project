@@ -1,3 +1,6 @@
+<?php
+require_once 'include/db.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>

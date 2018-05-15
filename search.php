@@ -1,9 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mirac
- * Date: 5/16/18
- * Time: 12:46 AM
- */
+require_once "include/header.php";
+require_once "include/categories.php"
+?>
 
-require_once "db.php";
+
+
+
+<?php
+require_once "include/footer.php";
+?>

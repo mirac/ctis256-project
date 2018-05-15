@@ -5,9 +5,9 @@
         <TR>
             <th>Categories</th>
         </tr>
-        </thEAD>
+        </thead>
+
         <?php
-        require_once 'db.php';
         $category = $_GET["category"];
         try {
             $list = $db->query("select distinct category from products")->fetchAll(PDO::FETCH_ASSOC);
