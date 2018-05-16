@@ -55,7 +55,13 @@ require_once "include/categories.php"
 
         ?>
     </div>
-    <br><p style="text-align: center; clear: both;">There are  <?= $rcnt ?> items.</p>
+    <br>
+    <?php if($rcnt > 0) {
+        ?>
+    <p style="text-align: center; clear: both;">There are  <?= $rcnt ?> items.</p>
+    <?php
+    }
+    ?>
 </div>
 
 

@@ -42,3 +42,5 @@ require_once "include/categories.php";
     <i class="fas fa-arrow-right"></i>
     </div>
 </div>
+
+<?php require_once "include/footer.php" ?>
