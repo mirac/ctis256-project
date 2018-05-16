@@ -3,11 +3,11 @@ require_once "include/header.php";
 require_once "include/categories.php"
 ?>
 
-
+<br>
 <div id="container">
 
     <h1>Search Page</h1>
-
+    <center><h4>You are looking at results of '<?=$_GET['term']?>' term;</h4></center>
     <div id="left">
 
         <?php
@@ -36,6 +36,9 @@ require_once "include/categories.php"
                 echo '<br></div>';
                 $itemcnt += 1;
             }
+
+            if($stmt->rowCount() == 0)
+                echo "<br><br><br><center><h4 style='color:#ab2e2d'>We couldn't find any result.</h4></center><br><br><br>";
         } catch (Exception $ex) {
             echo "<p>DB Error : " . $ex->getMessage() . " </p>";
             echo $itemcnt;
