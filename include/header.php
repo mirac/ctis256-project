@@ -15,6 +15,9 @@ require_once 'include/db.php';
 <body>
 
 
+
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,11 +36,16 @@ require_once 'include/db.php';
                 <a class="nav-link disabled" href="#">Disabled</a>
             </li>
         </ul>
-        <i class="fa  fa-shopping-cart" style="color:white; font-size: 30px; margin-right: 10px;"></i>&nbsp
-        <form class="form-inline my-2 my-lg-0">
 
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+
+        <i class="fa  fa-shopping-cart" style="color:white; font-size: 30px; margin-right: 10px;"></i>&nbsp
+        <form class="form-inline my-2 my-lg-0" action="search.php" method="get">
+
+            <input class="form-control mr-sm-2" name="term" value="<?php if(isset($_GET['term'])) echo $_GET['term']; ?>" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
 </nav>
+
+
