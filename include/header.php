@@ -1,5 +1,6 @@
 <?php
 require_once 'include/db.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,14 +33,26 @@ require_once 'include/db.php';
             <li class="nav-item">
                 <a class="nav-link" href="categories.php">Categories</a>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+            </li>-->
         </ul>
-        <a class="link" href="login.php">Login</a>&nbsp;
-        <span style="color:#999">|</span>
-        &nbsp;<a class="link" href="register.php">Register</a>&nbsp;&nbsp;&nbsp;
 
+        <?php
+        if(empty($_SESSION['user'])) {
+            ?>
+            <a class="link" href="login.php">Login</a>&nbsp;
+            <span style="color:#999">|</span>
+            &nbsp;<a class="link" href="register.php">Register</a>&nbsp;&nbsp;&nbsp;
+            <?php
+        } else {
+            ?>
+            <span style="color:#fff">Welcome <?=$_SESSION['fullname']?>!</span>&nbsp;
+            <span style="font-size: 12px"><a class="link" href="logout.php">(Logout)</a></span>
+            &nbsp;
+            <?php
+        }
+        ?>
         <i class="fa  fa-shopping-cart" style="color:white; font-size: 25px;margin-right: 0;padding-right: 0"></i>
         <a class="link" style="margin-left: 5px;margin-right: 5px" href="basket.php">Basket (0)</a>&nbsp;
         <form class="form-inline my-2 my-lg-0" action="search.php" method="get">
