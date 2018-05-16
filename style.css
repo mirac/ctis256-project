@@ -113,3 +113,14 @@ h1 {
     color: #FFF;
     text-decoration: underline;
 }
+
+#arrows{
+    font-size: 40px;
+    text-align: center;
+}
+
+div#probox:nth-child(-n+5){
+
+    display: none;
+
+}

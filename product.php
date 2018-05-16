@@ -17,7 +17,8 @@ $item = $_GET["id"] ;
                $itemcnt = 0;
 
                echo  "<h1>" . $row['title'] . "</h1><br>" ;
-               echo '<div id="leftpart"><div id="desc">' . $row['description'] . "</div>";
+
+                 echo '<div id="leftpart"><div id="desc">' . $row['description'] . "</div>";
                echo "<br><h1 style ='float: left; margin-left: 25%; margin-top: 30px;'>₺ " . $row['price'];
                echo '<br><button class="btn btn-primary btn-lg" type="submit">Add to Cart <i class="fas fa-cart-arrow-down"></i></button></h1>';
                echo '</div>';
@@ -33,4 +34,5 @@ $item = $_GET["id"] ;
 ?>
 
 </div>
+
 <?php require_once "include/footer.php" ?>

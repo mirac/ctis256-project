@@ -8,10 +8,10 @@
     <meta name="author" content="">
     <style>
 
-        *{
-            margin: 0;
-            padding: 0;
-        }
+     
+
+
+
 
         html,
         body {
@@ -20,11 +20,8 @@
 
 
         body {
-            
-            
-
             align-items: center;
-            padding-top: 40px;
+
             padding-bottom: 40px;
             background-color: #f5f5f5;
         }
@@ -85,9 +82,11 @@
             if (trim($_POST["email"]) != "" && trim($_POST["pass"]) != "") {
                 $email = $_POST['email'];
                 $pass = $_POST['pass'];
+
             }
         }
         $pass = hash('sha256', $pass);
+
         $sql = "SELECT * FROM users WHERE email = ? ";
         $stmt = $db->prepare($sql);
         $stmt->execute([$email]);
@@ -97,16 +96,27 @@
 
 
             if (password_verify($pass, $user['pass'])) {
+               if(isset($remember)){
+                   $autologin = password_hash(uniqid(),  sha256);
+                  $setcookie("autologin", $autologin, time(), + 60*60*24);
+                  $stmt2 = $db->prepare("update users set autologin = ? where username = ?");
+                         $stmt2 -> execute([$autologin, $user["email"]]);
+               }
+               $_SESSION["user"] = $email;
+               var_dump($_SESSION["user"]);
                 header("Location: index.php");
                 exit;
 
 
-            }  else {
-                echo '<div class="alert alert-danger" role="alert">Authentication Failed</div>'; 
+            }else {
 
             }
 
+                 echo '<div class="alert alert-danger" role="alert">1Authentication Failed</div>';
 
+            } else {
+                         
+                    echo '<div class="alert alert-danger" role="alert">2Authentication Failed</div>';
 
        
 
@@ -123,7 +133,7 @@
     <input name="pass" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
     <div class="checkbox mb-3">
         <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" name="remember" value="remember-me"> Remember me
         </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>

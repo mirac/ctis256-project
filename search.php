@@ -12,14 +12,18 @@ require_once "include/categories.php"
 
         <?php
         try {
+            $rcnt = 0;
             $term = $_GET['term'];
-
+            $trimmed = trim($term);
+            if($trimmed != '')
+            {
             $stmt = $db->prepare("select * from products where title LIKE :keywords;");
             $stmt->bindValue(':keywords', "%$term%");
             $stmt->execute();
 
             echo $category;
             $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
             foreach ($list as $row) {
                 $itemcnt = 0;
                 echo '<div id="products">';
@@ -35,9 +39,12 @@ require_once "include/categories.php"
                 echo '<button class="btn btn-primary" type="submit">Add to Cart <i class="fas fa-cart-arrow-down"></i></button>';
                 echo '<br></div>';
                 $itemcnt += 1;
+                $rcnt = $stmt->rowCount();
+
+            }
             }
 
-            if($stmt->rowCount() == 0)
+            if($rcnt == 0)
                 echo '<br><br><br><center><div class="alert alert-danger" style="margin-left:120px; width:500px">
   <strong>Sorry!</strong><br>We could not find any result related to this term.
 </div></center><br><br><br>';
@@ -48,7 +55,10 @@ require_once "include/categories.php"
 
         ?>
     </div>
+    <br><p style="text-align: center; clear: both;">There are  <?= $rcnt ?> items.</p>
 </div>
+
+
 
 </div>
 
