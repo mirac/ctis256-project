@@ -22,7 +22,7 @@ require_once 'include/db.php';
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">All Of Them Are Here</a>
+    <a class="navbar-brand" href="index.php">All Of Them Are Here</a>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -36,10 +36,12 @@ require_once 'include/db.php';
                 <a class="nav-link disabled" href="#">Disabled</a>
             </li>
         </ul>
+        <a class="link" href="login.php">Login</a>&nbsp;
+        <span style="color:#999">|</span>
+        &nbsp;<a class="link" href="register.php">Register</a>&nbsp;&nbsp;&nbsp;
 
-
-
-        <i class="fa  fa-shopping-cart" style="color:white; font-size: 30px; margin-right: 10px;"></i>&nbsp
+        <i class="fa  fa-shopping-cart" style="color:white; font-size: 25px;margin-right: 0;padding-right: 0"></i>
+        <a class="link" style="margin-left: 5px;margin-right: 5px" href="basket.php">Basket (0)</a>&nbsp;
         <form class="form-inline my-2 my-lg-0" action="search.php" method="get">
 
             <input class="form-control mr-sm-2" name="term" value="<?php if(isset($_GET['term'])) echo $_GET['term']; ?>" type="search" placeholder="Search" aria-label="Search">
