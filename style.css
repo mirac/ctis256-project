@@ -105,3 +105,11 @@ h1 {
     width: 30%;
 }
 
+.link{
+    color: #FFF;
+}
+
+.link:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
