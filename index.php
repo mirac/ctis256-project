@@ -9,7 +9,10 @@ require_once "include/categories.php";
     <!-- promotional Products -->
     <?php
     try {
-        $list = $db->query("select * from products where promotional=1")->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $db->prepare("select * from products where promotional=1");
+        $stmt -> execute();
+        $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        //$list->fetchColumn();
         foreach ($list as $row) {
             echo '<div id="probox">';
             echo '<div class="alert alert-success" role="alert">Promotion</div>';
