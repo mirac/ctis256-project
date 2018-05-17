@@ -124,3 +124,92 @@ div#probox:nth-child(-n+5){
     display: none;
 
 }
+
+#basketmain {
+
+    width: 100%;
+
+
+}
+
+#basketleft {
+    float: left;
+    width: 70%;
+    background-color: red;
+    height: 100%;
+    padding-left: 100px;
+    padding-top: 50px;
+
+}
+
+#basketright > h1,
+#basketleft > h1 {
+    text-align: left;
+    border-bottom: 1px solid black;
+    width: 90%;
+}
+
+#basketleftinner {
+
+    width: 90%;
+
+}
+
+#basketleftinner > table {
+
+    width: 100%;
+
+}
+#basketimg {
+
+    width: 200px;
+
+}
+
+#baskettitle {
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+
+#basketleftinner > table, td,tr {border-right: 1px solid black;}
+
+
+#basketleftinner > tr:nth-last-child(1) {
+    padding-bottom: 200px;
+}
+
+#basketright {
+    float: left;
+    width: 30%;
+    background-color: green;
+    height: 100%;
+    padding-left: 50px;
+    padding-top: 50px;
+
+}
+
+#line {
+    border-bottom: 10px solid black;
+    width: 100%;
+    clear: both;
+}
+
+label > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+    border:2px solid #f00;
+}
+
+.borderbottom { border-bottom: 1px black solid;}
+
+container {
+    width: 175px;
+    margin-left: 20px;
+}
