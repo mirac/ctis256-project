@@ -25,7 +25,7 @@ require_once "include/categories.php";
                 echo "<img src=" . "{$row['image']}" . "><br>";
                 echo "<div id='price'>";
                 echo "₺ " . "{$row['price']}" . ' <span class="badge badge-secondary">Discounted</span></h6></div><br>';
-                echo '<button class="btn btn-primary" type="submit">Add to Cart <i class="fas fa-cart-arrow-down"></i></button>';
+                echo '<button id="addToBasket" class="btn btn-primary" type="submit" onclick="javascript:addBasket('.$row['id'].');">Add to Cart <i class="fas fa-cart-arrow-down"></i></button>';
                 echo '<br></div>';
 
 

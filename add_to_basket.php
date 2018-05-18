@@ -60,4 +60,5 @@ for ($i=0; $i < $counter; $i++) {
         $sum += ($product["price"] * $product["amount"]);
 }
 
+
 ?>

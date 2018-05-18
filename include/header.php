@@ -7,11 +7,13 @@ session_start();
 <head>
     <meta charset="utf-8">
     <title>Coming soon..</title>
+    <script src="assets/jquery-1.12.4.min.js"></script>
+    <script src="assets/jquery.toast.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="assets/bootstrap.min.css">
-    <script src="assets/bootstrap.min.js"></script>
-    <script src="assets/jquery-3.3.1.slim.min.js"></script>
     <link rel="stylesheet" href="assets/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/jquery.toast.min.css">
 </head>
 <body>
 
