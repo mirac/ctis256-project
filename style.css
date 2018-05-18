@@ -222,3 +222,10 @@ div#probox:nth-child(-n+5){
 
 .center {text-align: center;
     margin: 0 auto; color: yellow}
+
+#addproduct {
+
+    margin: 0 auto;
+    width: 50%;
+
+}
