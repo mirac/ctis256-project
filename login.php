@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "include/header.php";
 
 if(!empty($_SESSION['user']))
@@ -119,7 +118,7 @@ if(!empty($_SESSION['user']))
 
             }
 
-                 echo '<div class="alert alert-danger" role="alert">Your password is incorrect.</div>';
+                 echo '<div class="alert alert-danger" role="alert">Your email or password is incorrect.</div>';
 
             } else {
                          

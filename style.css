@@ -135,22 +135,29 @@ div#probox:nth-child(-n+5){
 #basketleft {
     float: left;
     width: 70%;
-    background-color: red;
     height: 100%;
     padding-left: 100px;
     padding-top: 50px;
 
 }
 
-#basketright > h1,
+
 #basketleft > h1 {
     text-align: left;
     border-bottom: 1px solid black;
     width: 90%;
 }
 
-#basketleftinner {
+#basketright > h1{
 
+    text-align: center;
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#basketleftinner {
+    margin-top: 70px;
     width: 90%;
 
 }
@@ -162,7 +169,7 @@ div#probox:nth-child(-n+5){
 }
 #basketimg {
 
-    width: 200px;
+    width: 100px;
 
 }
 
@@ -182,9 +189,7 @@ div#probox:nth-child(-n+5){
 #basketright {
     float: left;
     width: 30%;
-    background-color: green;
     height: 100%;
-    padding-left: 50px;
     padding-top: 50px;
 
 }
@@ -195,21 +200,25 @@ div#probox:nth-child(-n+5){
     clear: both;
 }
 
-label > input{ /* HIDE RADIO */
-    visibility: hidden; /* Makes input not-clickable */
-    position: absolute; /* Remove input from document flow */
-}
-label > input + img{ /* IMAGE STYLES */
-    cursor:pointer;
-    border:2px solid transparent;
-}
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-    border:2px solid #f00;
+.paymethod{
+
+    left: 15%;
+    margin-bottom: 50px;
 }
 
-.borderbottom { border-bottom: 1px black solid;}
 
-container {
-    width: 175px;
-    margin-left: 20px;
+#payout {
+
+    background-color: #c6c8ca;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 80%;
 }
+
+.borderbottom
+{ border-bottom: 1px black solid;}
+
+
+.center {text-align: center;
+    margin: 0 auto; color: yellow}

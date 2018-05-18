@@ -2,8 +2,10 @@
 <html>
 <?php
 
+
 require_once 'include/header.php';
 require_once 'include/db.php';
+
 $stmt = $db->prepare("select * from products where promotional = 1 ");
 $stmt -> execute();
 $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -50,26 +52,35 @@ $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 Total price:
 
+                <br>
+                <br>
+                <br>
 
-                Payment Method:
 
+                <h3 style="text-align: center; margin: 10px auto; border-bottom: 1px solid black; width: 78%  ">Payment Method</h3>
 
+            <div id="paymethod">
 
-                <div class="btn-group" data-toggle="buttons">
+                <div class="paymethod btn-group" data-toggle="buttons">
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option1" autocomplete="off"><i class="fab fa-cc-paypal fa-4x"></i>
-
-
-
+                        <i id="payment" class=" fab fa-cc-paypal fa-4x"></i><br>
+                        <input type="radio" name="options" id="option1" autocomplete="off" >
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> <i class="fab fa-cc-mastercard fa-4x"></i>
+                        <i id="payment" class="fab fa-cc-mastercard fa-4x"></i><br>
+                        <input type="radio" name="options" id="option2" autocomplete="off" >
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option3" autocomplete="off">  <i class="fab fa-cc-visa fa-4x" aria-hidden="true"></i>
+                        <i id="payment" class="fab fa-cc-visa fa-4x"></i><br>
+                        <input type="radio" name="options" id="option3" autocomplete="off" >
                     </label>
+                  </div>
 
-                </div>
+
+            </div>
+                <button type="button" class="btn btn-primary" style="margin-left: 15%;  width: 69%;">Pay</button>
+
+
 
 
 
