@@ -19,7 +19,7 @@ else {
 
 
 
-<form method="POST" action="sendreg.php" class="form-signin">
+<form method="POST" action="addpro.php" class="form-signin">
 
     <h1 class="h3 mb-3 font-weight-normal">Add Product</h1>
 
@@ -30,22 +30,21 @@ else {
     <input name="brand" type="text" id="inputEmail" class="form-control" placeholder="Brand" required>
     <br>
     <label for="Title" class="sr-only">Title</label>
-    <input name="Title" type="text" id="inputEmail" class="form-control" placeholder="Title" required>
+    <input name="title" type="text" id="inputEmail" class="form-control" placeholder="Title" required>
     <br>
     <label for="Description" class="sr-only">Description</label>
-    <textarea name="Description" type="text" id="inputEmail" class="form-control" placeholder="Description" required>
-    </textarea>
+    <textarea name="description" type="text" id="inputEmail" class="form-control" placeholder="Description" required></textarea>
         <br>
     <label for="Image" class="sr-only">Image</label>
-    <input name="Image" type="text" id="inputEmail" class="form-control" placeholder="Image" required>
+    <input name="image" type="text" id="inputEmail" class="form-control" placeholder="Image" required>
     <br>
     <label for="Price" class="sr-only">Price</label>
-    <input name="Price" type="text" id="inputEmail" class="form-control" placeholder="Price" required>
+    <input name="price" type="text" id="inputEmail" class="form-control" placeholder="Price" required>
     <br>
     <label>
-        <input type="checkbox" name="remember" value="remember-me" required> Promotional
+        <input type="checkbox" name="promotional" value="1"> Promotional
     </label>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Add Product</button>
+    <button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Add Product</button>
 
 </form>
 </div>
