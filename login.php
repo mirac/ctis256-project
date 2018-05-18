@@ -1,79 +1,77 @@
 <?php
 require_once "include/header.php";
 
-if(!empty($_SESSION['user']))
-{
+if (!empty($_SESSION['user'])) {
     header("Location: index.php");
     exit;
 }
 
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <style>
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <style>
 
 
-        html,
-        body {
-            height: 100%;
-        }
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                align-items: center;
+
+                padding-bottom: 40px;
+                background-color: #f5f5f5;
+            }
+
+            .form-signin {
+                width: 100%;
+                max-width: 330px;
+                padding: 15px;
+                margin: auto;
+            }
+
+            .form-signin .checkbox {
+                font-weight: 400;
+            }
+
+            .form-signin .form-control {
+                position: relative;
+                box-sizing: border-box;
+                height: auto;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .form-signin .form-control:focus {
+                z-index: 2;
+            }
+
+            .form-signin input[type="email"] {
+                margin-bottom: -1px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            .form-signin input[type="password"] {
+                margin-bottom: 10px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
 
 
-        body {
-            align-items: center;
+        </style>
+        <title>Signin</title>
 
-            padding-bottom: 40px;
-            background-color: #f5f5f5;
-        }
+        <!-- Bootstrap core CSS -->
+        <link href="assets/bootstrap.min.css" rel="stylesheet">
 
-        .form-signin {
-            width: 100%;
-            max-width: 330px;
-            padding: 15px;
-            margin: auto;
-        }
-
-        .form-signin .checkbox {
-            font-weight: 400;
-        }
-
-        .form-signin .form-control {
-            position: relative;
-            box-sizing: border-box;
-            height: auto;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        .form-signin .form-control:focus {
-            z-index: 2;
-        }
-
-        .form-signin input[type="email"] {
-            margin-bottom: -1px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-
-        .form-signin input[type="password"] {
-            margin-bottom: 10px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-
-
-    </style>
-    <title>Signin</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="assets/bootstrap.min.css" rel="stylesheet">
-
-</head>
+    </head>
 <body class="text-center">
 <form method="POST" action="login.php" class="form-signin">
     <img class="mb-4" src="assets/logo.jpg" height="200">
@@ -100,29 +98,30 @@ if(!empty($_SESSION['user']))
 
             if ($pass == $user['pass']) {
 
-               if(isset($remember)){
-                   $autologin = password_hash(uniqid(),  sha256);
-                  $setcookie("autologin", $autologin, time(), + 60*60*24);
-                  $stmt2 = $db->prepare("update users set autologin = ? where username = ?");
-                         $stmt2 -> execute([$autologin, $user["email"]]);
-               }
-               echo "<h1>$email | ".$user['full_name']."</h1>";
-               $_SESSION["user"] = $email;
-               $_SESSION["fullname"] = $user['full_name'];
+                if (isset($remember)) {
+                    $autologin = password_hash(uniqid(), sha256);
+                    $setcookie("autologin", $autologin, time(), +60 * 60 * 24);
+                    $stmt2 = $db->prepare("update users set autologin = ? where username = ?");
+                    $stmt2->execute([$autologin, $user["email"]]);
+                }
+                echo "<h1>$email | " . $user['full_name'] . "</h1>";
+                $_SESSION["user"] = $email;
+                $_SESSION["fullname"] = $user['full_name'];
+                $_SESSION["role"] = $user['role'];
 
-               header("Location: index.php");
-               exit;
+                header("Location: index.php");
+                exit;
 
 
-            }else {
+            } else {
 
             }
 
-                 echo '<div class="alert alert-danger" role="alert">Your email or password is incorrect.</div>';
+            echo '<div class="alert alert-danger" role="alert">Your email or password is incorrect.</div>';
 
-            } else {
-                         
-                    echo '<div class="alert alert-danger" role="alert">Your email or password is incorrect.</div>';
+        } else {
+
+            echo '<div class="alert alert-danger" role="alert">Your email or password is incorrect.</div>';
 
         }
     } else echo "Please send it with POST method";

@@ -83,7 +83,13 @@ if(isset($_SESSION['user'])) {
 
     <label for="fullname" class="sr-only">Full name</label>
     <input name="fullname" type="text" id="inputEmail" class="form-control" placeholder="Name Surname" required>
-<br>
+
+    <label for="cargo" class="sr-only">Cargo address</label>
+    <input name="cargo" type="text" id="inputEmail" class="form-control" placeholder="Cargo Address" required>
+
+
+
+    <br>
     <div class="checkbox mb-3">
         <label>
             <input type="checkbox" name="remember" value="remember-me" required> Accept the Aggreement
