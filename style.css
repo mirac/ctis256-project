@@ -44,7 +44,8 @@ h1 {
     width: 1050px;
     float: left;
     margin-left: 5%;
-
+    margin-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 #probox {
@@ -149,21 +150,19 @@ div#probox:nth-child(-n+5){
 }
 
 #basketright > h1{
-
     text-align: center;
     border-bottom: 1px solid black;
-    width: 80%;
+    width: 82.5%;
     margin: 0 auto;
+    margin-right: 80px;
 }
 
 #basketleftinner {
-    margin-top: 70px;
+    margin-top: 30px;
     width: 90%;
-
 }
 
 #basketleftinner > table {
-
     width: 100%;
 
 }
@@ -202,17 +201,17 @@ div#probox:nth-child(-n+5){
 
 .paymethod{
 
-    left: 15%;
-    margin-bottom: 50px;
+    left: 7.5%;
+    margin-bottom: 20px;
 }
 
 
 #payout {
-
+    box-shadow: 10px 10px 5px gray;
     background-color: #c6c8ca;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 20px;
+    margin-right: 70px;
+    padding-bottom: 10px;
     height: 80%;
 }
 
@@ -227,5 +226,44 @@ div#probox:nth-child(-n+5){
 
     margin: 0 auto;
     width: 50%;
+
+}
+
+#paybtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#paybtn:focus {
+    background-color: #28a745;
+}
+
+#comments {
+    clear: both;
+    margin: 0 auto;
+    padding-top: 80px;
+    width: 700px;
+
+}
+
+#comment {
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    margin: 5px auto;
+    height: 120px;
+
+}
+
+#comment_text {
+
+    padding-left: 20px;
 
 }
