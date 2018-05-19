@@ -1,10 +1,15 @@
 <?php
 
 session_start();
-session_unset();
-session_destroy();
 
-header("location:index.php");
+$_SESSION = [];
+$_SESSION["basket"] = [];
+
+  setcookie(session_name(), '', 1, '/');  // delete PHPSESSID Cookie
+  session_destroy();  // delete session file
+
+  header("Location: index.php") ;
+
 exit();
 
 

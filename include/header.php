@@ -50,6 +50,11 @@ session_start();
             <span style="font-size: 12px"><a class="link" href="logout.php">(Logout)</a></span>
             &nbsp;
             <?php
+            if($_SESSION['role'] == 1)
+            {
+
+                echo '<span style="font-size: 12px"><a class="red" href="admin.php">(Admin Panel)</a></span>&nbsp;';
+            }
         }
         ?>
         <i class="fa  fa-shopping-cart" style="color:white; font-size: 25px;margin-right: 0;padding-right: 0"></i>

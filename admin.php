@@ -17,9 +17,9 @@ else {
 }
     ?>
 
+1
 
-
-<form method="POST" action="addpro.php" class="form-signin">
+<form method="POST" action="add_product.php" class="form-signin">
 
     <h1 class="h3 mb-3 font-weight-normal">Add Product</h1>
 

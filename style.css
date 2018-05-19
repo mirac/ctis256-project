@@ -13,6 +13,8 @@ h1 {
 
 }
 
+.red {color: #dbf4a2;}
+
 #left {
     float: left;
     width: 88%;
@@ -44,6 +46,8 @@ h1 {
     width: 1050px;
     float: left;
     margin-left: 5%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
 
 }
 
@@ -227,5 +231,27 @@ div#probox:nth-child(-n+5){
 
     margin: 0 auto;
     width: 50%;
+
+}
+
+#comments {
+    clear: both;
+    margin: 0 auto;
+    padding-top: 80px;
+    width: 700px;
+
+}
+
+#comment {
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    margin: 5px auto;
+    height: 120px;
+
+}
+
+#comment_text {
+
+    padding-left: 20px;
 
 }
