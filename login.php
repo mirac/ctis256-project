@@ -1,4 +1,5 @@
 <?php
+require_once "include/db.php";
 require_once "include/header.php";
 
 if (!empty($_SESSION['user'])) {
@@ -76,8 +77,6 @@ if (!empty($_SESSION['user'])) {
 <form method="POST" action="login.php" class="form-signin">
     <img class="mb-4" src="assets/logo.jpg" height="200">
     <?php
-
-    require_once('include/db.php');
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["email"], $_POST["pass"])) {
             if (trim($_POST["email"]) != "" && trim($_POST["pass"]) != "") {

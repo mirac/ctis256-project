@@ -149,21 +149,19 @@ div#probox:nth-child(-n+5){
 }
 
 #basketright > h1{
-
     text-align: center;
     border-bottom: 1px solid black;
-    width: 80%;
+    width: 82.5%;
     margin: 0 auto;
+    margin-right: 80px;
 }
 
 #basketleftinner {
-    margin-top: 70px;
+    margin-top: 30px;
     width: 90%;
-
 }
 
 #basketleftinner > table {
-
     width: 100%;
 
 }
@@ -202,17 +200,17 @@ div#probox:nth-child(-n+5){
 
 .paymethod{
 
-    left: 15%;
-    margin-bottom: 50px;
+    left: 7.5%;
+    margin-bottom: 30px;
 }
 
 
 #payout {
-
+    box-shadow: 10px 10px 5px gray;
     background-color: #c6c8ca;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 20px;
+    margin-right: 70px;
+    padding-bottom: 10px;
     height: 80%;
 }
 
