@@ -23,15 +23,19 @@ for ($i = 0; $i < $counter; $i++) {
 <div id="basketmain">
 
     <div id="basketleft">
-        <h1>Basket</h1>
+        <h1>Basket <span style="font-size: 12px"><a href="javascript:cleanBasket();">(Clean Basket)</a></span></h1>
 
         <div id="basketleftinner">
 
-
             <?php
-            echo ' <table border="1">';
-            echo '<th></th><th><center>Product</center></th><th><center>Amount</center></th>';
-            echo '<th><center>Unit Price</center></th><th><center>Total Price</center></th>';
+            if($counter > 0) {
+                echo ' <table border="1">';
+                echo '<th></th><th><center>Product</center></th><th><center>Amount</center></th>';
+                echo '<th><center>Unit Price</center></th><th><center>Total Price</center></th><th></th>';
+            } else {
+                echo "<h2>You do not have any products in the basket.</h2>";
+            }
+
 
             foreach ($_SESSION["basket"]["products"] as $item) {
                 $total_amount_price = ($item["price"] * $item["amount"]);
@@ -44,7 +48,9 @@ for ($i = 0; $i < $counter; $i++) {
                 echo '<td ><center><span id="baskettitle">' . $item['amount'] . '</span></center></td>';
                 echo '<td ><center><span id="baskettitle">' . $item['price'] . ' TL</span></center></td>';
                 echo '<td ><center><span id="baskettitle">' . $total_amount_price . ' TL</span></center></td>';
+                echo '<td><center><a href="javascript:deleteProductFromBasket('.$item['id'].');"><i class="far fa-trash-alt"></i></a></center></td>';
                 echo '</tr>';
+
             }
 
             echo '</table><br>';
@@ -61,7 +67,7 @@ for ($i = 0; $i < $counter; $i++) {
             <center><br>
                 <?php echo "<h2>TOTAL PRICE:<br>$sum TL</h2>"; ?>
                 <br>
-                <h2>Items: <?= $counter ?></h2>
+                <h3>Items: <?= $counter ?></h3>
                 <br></center>
 
 
@@ -87,10 +93,6 @@ for ($i = 0; $i < $counter; $i++) {
 
 
             </div>
-            <button type="button" class="btn btn-primary" style="margin-left: 15%;  width: 69%;">Pay</button>
+            <button type="button" onclick="javascript:paymentOperation();" id="paybtn" style="margin-left: 15%;  width: 69%;" <?php if(count($_SESSION['basket']['products']) == 0) echo "disabled"; ?>>Pay</button>
 
-
-</body>
-
-
-</html>
+            <?php require_once "include/footer.php" ?>

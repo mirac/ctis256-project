@@ -58,7 +58,7 @@ session_start();
         }
         ?>
         <i class="fa  fa-shopping-cart" style="color:white; font-size: 25px;margin-right: 0;padding-right: 0"></i>
-        <a class="link" style="margin-left: 5px;margin-right: 5px" href="basket.php">Basket (<?=count($_SESSION["basket"]["products"])      ?>)</a>&nbsp;
+        <a class="link" style="margin-left: 5px;margin-right: 5px" href="basket.php">Basket (<span id="basketSize"><?=count($_SESSION["basket"]["products"])?></span>)</a>&nbsp;
         <form class="form-inline my-2 my-lg-0" action="search.php" method="get">
 
             <input class="form-control mr-sm-2" name="term" value="<?php if(isset($_GET['term'])) echo $_GET['term']; ?>" type="search" placeholder="Search" aria-label="Search">
@@ -66,5 +66,12 @@ session_start();
         </form>
     </div>
 </nav>
+<?php
 
+if(empty($_SESSION['basket'])) {
+    $_SESSION['basket'] = [];
+    $_SESSION['basket']['products'] = [];
+}
+
+?>
 
