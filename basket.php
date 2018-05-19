@@ -93,6 +93,6 @@ for ($i = 0; $i < $counter; $i++) {
 
 
             </div>
-            <button type="button" onclick="javascript:paymentOperation();" class="btn btn-primary" style="margin-left: 15%;  width: 69%;" <?php if(count($_SESSION['basket']['products']) ==     0) echo "disabled"; ?>>Pay</button>
+            <button type="button" onclick="javascript:paymentOperation();" id="paybtn" style="margin-left: 15%;  width: 69%;" <?php if(count($_SESSION['basket']['products']) == 0) echo "disabled"; ?>>Pay</button>
 
             <?php require_once "include/footer.php" ?>

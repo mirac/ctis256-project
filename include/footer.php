@@ -50,7 +50,10 @@
                 },
             })
 
-            location.replace("index.php");
+            setTimeout(
+                function() {
+                    location.replace("index.php");
+                }, 2000);
         });
     }
 

@@ -28,8 +28,6 @@ require_once "include/categories.php";
                 echo '<button id="addToBasket" class="btn btn-primary" type="submit" onclick="javascript:addBasket('.$row['id'].');">Add to Cart <i class="fas fa-cart-arrow-down"></i></button>';
                 echo '<br></div>';
 
-
-
         }
     } catch (Exception $ex) {
         echo "<p>DB Error : " . $ex->getMessage() . " </p>";

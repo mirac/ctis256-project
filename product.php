@@ -20,7 +20,7 @@ $item = $_GET["id"] ;
 
                  echo '<div id="leftpart"><div id="desc">' . $row['description'] . "</div>";
                echo "<br><h1 style ='float: left; margin-left: 25%; margin-top: 30px;'>₺ " . $row['price'];
-               echo '<br><button class="btn btn-primary btn-lg" type="submit">Add to Cart <i class="fas fa-cart-arrow-down"></i></button></h1>';
+               echo '<br><button class="btn btn-primary btn-lg" type="submit"  onclick="javascript:addBasket('.$row['id'].');">Add to Cart <i class="fas fa-cart-arrow-down"></i></button></h1>';
                echo '</div>';
                echo '<div id="rightpart"><img src="';
                echo $row['image'];
