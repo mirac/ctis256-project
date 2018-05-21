@@ -4,7 +4,7 @@ Bilkent University, Department of Computer Technology & Information Systems
 2017-2018 Spring Semester Web Technologies II Project.
 
 Instructor: Serkan GENÇ
-Group Members: Miraç SATIÇ
+Group Members: Miraç SATIÇ<br>
                Çağrı BAYRAM
                
 
