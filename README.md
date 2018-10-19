@@ -11,6 +11,6 @@ Group Members: <br>Miraç SATIÇ<br>
 # Used Languages, Freamworks, Tools, etc.
 In this project ue used PHP, MySQL, JavaScript, jQuery, jQuery Toast, AJAX, Bootstrap and FontAwesome; as Version Control System, we used Git.<br>
 
-As tools we used PhpStorm and DataGrip.<br>
+As IDEs we used PhpStorm and DataGrip.<br>
 
 Additionally, to collect data we wrote a script to collect title, price, image URL and brand from hepsiburada.com.
